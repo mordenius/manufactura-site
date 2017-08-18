@@ -1,0 +1,25 @@
+{
+	"presets" : ["es2015", "react",
+		["env", {
+			"targets": {
+				"browsers": ["last 2 versions", "safari >= 7"]
+			}
+		}]],
+	"plugins": [
+		["babel-plugin-root-import",
+			[{
+				"rootPathPrefix": "~",
+				"rootPathSuffix": "source/js"
+			},
+				{
+					"rootPathPrefix": "@",
+					"rootPathSuffix": "source/data"
+				},
+				{
+					"rootPathPrefix": "#",
+					"rootPathSuffix": "source/md"
+				}
+			]
+		]
+	]
+}

@@ -1,0 +1,28 @@
+header
+	text-align: left
+	position: fixed
+	height: 60px
+	width: 100%
+	-webkit-box-shadow: 0 0 20px 0 #757575
+	box-shadow: 0 0 20px 0 #757575
+	z-index: 10
+	.wrapper
+		@extend .flex-between
+		padding: 0 20px
+	.logo
+		height: 25px
+		margin: auto 0
+		img
+			height: 100%
+	nav
+		@extend .flex-center-v
+		div
+			height: 60px
+			padding: 20px 10px
+			
+			&.current
+				background-color: $brown-dark
+				color: white
+
+		&:first-child
+			flex-shrink: 1

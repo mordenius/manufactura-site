@@ -1,0 +1,88 @@
+{
+	"name": "manufactura-site",
+	"version": "0.0.1",
+	"description": "",
+	"main": "index.htnl",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "webpack-dev-server --config ./webpack.dev.config.js --hot --watch --inline",
+		"prod": "webpack --define process.env.NODE_ENV='\"production\"' --config ./webpack.prod.config.js",
+		"lint:js": "eslint ./source/js --ext .jsx --ext .js",
+		"lint-staged": "lint-staged"
+	},
+	"pre-commit": "lint-staged",
+	"lint-staged": {
+		"*.js": "eslint"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/mordenius/manufactura.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/mordenius/manufactura/issues"
+	},
+	"homepage": "https://github.com/mordenius/manufactura#readme",
+	"devDependencies": {
+		"babel-cli": "^6.26.0",
+		"babel-core": "^6.26.0",
+		"babel-eslint": "^7.2.3",
+		"babel-loader": "^7.1.1",
+		"babel-plugin-import": "^1.4.0",
+		"babel-plugin-root-import": "^5.1.0",
+		"babel-plugin-transform-export-extensions": "^6.22.0",
+		"babel-preset-env": "^1.6.0",
+		"babel-preset-es2015": "^6.24.1",
+		"babel-preset-react": "^6.24.1",
+		"babili-webpack-plugin": "^0.1.2",
+		"clean-webpack-plugin": "^0.1.16",
+		"copy-webpack-plugin": "^4.0.1",
+		"css-loader": "^0.28.5",
+		"eslint": "^4.4.1",
+		"eslint-config-airbnb-base": "^11.3.1",
+		"eslint-config-prettier": "^2.3.0",
+		"eslint-plugin-import": "^2.7.0",
+		"eslint-plugin-react": "^7.2.1",
+		"extract-text-webpack-plugin": "^3.0.0",
+		"file-loader": "^0.11.2",
+		"lint-staged": "^4.0.3",
+		"node-sass": "^4.5.3",
+		"pre-commit": "^1.2.2",
+		"prettier": "^1.5.3",
+		"react-hot-loader": "^1.3.1",
+		"rimraf": "^2.6.1",
+		"sass-loader": "^6.0.6",
+		"style-loader": "^0.18.2",
+		"webpack": "^3.5.5",
+		"webpack-dev-server": "^2.7.1"
+	},
+	"dependencies": {
+		"bbt-loader": "^1.0.9",
+		"express": "^4.15.4",
+		"fs": "0.0.1-security",
+		"history": "^4.6.3",
+		"http": "0.0.0",
+		"ip": "^1.1.5",
+		"lodash": "^4.17.4",
+		"path": "^0.12.7",
+		"react": "^15.6.1",
+		"react-dom": "^15.6.1",
+		"react-markdown": "^2.5.0",
+		"redux-store-controller": "^1.1.3"
+	},
+	"bundledDependencies": [
+		"bbt-loader",
+		"fs",
+		"lodash",
+		"redux-store-controller",
+		"express",
+		"history",
+		"http",
+		"ip",
+		"path",
+		"react",
+		"react-dom",
+		"react-markdown"
+	]
+}

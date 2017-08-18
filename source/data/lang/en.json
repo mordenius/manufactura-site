@@ -1,0 +1,35 @@
+{
+	"description": "The framework for creating multi-dimensional software complex\r\nbased on the architecture of microprocesses.",
+	"version": "Under construction",
+	"sections": {
+		"architecture": "Architecture",
+		"rules": "Rules",
+		"quick-start": "Quick Start",
+		"tutorial": "Tutorial",
+		"docs": "Documentation"
+	},
+	"anchors": {
+		"overview": "Обзор",
+		"process": "Процесс",
+		"component": "Компонент",
+		"complex": "Комплекс"
+	},
+	"buttons": {
+		"quick-start": "Let's start",
+		"tutorial": "Tutorial"
+	},
+	"point": [
+		{
+			"title": "Scalability",
+			"description": "Maximality independence of Elements"
+		},
+		{
+			"title": "Autonomy",
+			"description": "It's may start working from the box"
+		},
+		{
+			"title": "Adaptable",
+			"description": "A fairly simple but very comprehensive API is available"
+		}
+	]
+}

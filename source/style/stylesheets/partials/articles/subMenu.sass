@@ -1,0 +1,36 @@
+.fixed
+	@extend .flex-between
+	position: fixed
+	width: inherit
+	max-width: 1024px
+	padding-right: 40px
+
+.sub-menu
+	width: 200px
+	min-height: 300px
+	padding: 24px 0 0 0
+	border-right: 1px solid $header
+	
+	&:nth-child(2)
+		border-right: none
+		border-left: 1px solid $header
+		padding-left: 20px
+	div
+		padding: 0 0 0 10px
+
+		&.current
+			background-color: $brown-dark
+			color: white
+			
+	.sub-menu-level
+		p
+			margin-top: 15px
+			margin-bottom: 0
+		.sub-menu-level p
+			margin-top: 5px
+		
+.anchor
+	display: block
+	height: 92px
+	margin-top: -92px
+	visibility: hidden

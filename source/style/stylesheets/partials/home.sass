@@ -1,0 +1,75 @@
+//=================================
+//	I Typography
+//---------------------------------
+.home-header .title
+	text-align: center
+	h3
+		padding: 0px 50px 20px
+		font-family: "PFSquareSansPro-Regular"
+
+	h2
+		margin: 20px auto 0
+		padding: 15px
+		font-size: 30px
+		background-color: rgba(237, 194, 64, .9)
+		color: white
+
+.point-wrapper .point h2
+	font-size: 25px
+	padding: 25px 0 15px
+	border-bottom: 1px solid $header
+	margin-bottom: 15px
+	font-family: "PFSquareSansPro-Regular"
+
+//=================================
+//	II Grid
+//---------------------------------
+.home-header
+	@extend .flex-center
+	width: 100%
+	padding: 25px 0
+	.title
+		@extend .flex-column
+		margin: auto 0
+		width: 100%
+		.line
+			width: 100%
+		.logo
+			padding: 20px 0
+			max-width: 460px
+			margin: 0 auto
+			img
+				width: 100%
+
+.point-wrapper
+	justify-content: space-between
+	flex-wrap: wrap
+	.point
+		margin: 0 auto
+		padding: 25px 15px
+		width: 33%
+		min-width: 180px
+
+#container .button-wrapper
+	max-width: 500px
+	margin: 20px auto
+	flex-wrap: wrap
+
+//=================================
+//	III Main
+//---------------------------------
+
+.home-header
+	background: $mint url("./../img/abstract-multicolor-network-background.jpg") 50% 60%
+	background-attachment: fixed
+	-webkit-box-shadow: inset 0 -5px 20px 0 #757575
+	box-shadow: inset 0 -5px 20px 0 #757575
+
+	.title .line
+		background-color: rgba(245, 250, 250, 0.8)
+		box-shadow: 0 0 20px 0 #757575
+
+.point-wrapper .point
+	border-left: 1px dashed $header
+	&:first-child
+		border-left: none

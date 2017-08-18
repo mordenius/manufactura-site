@@ -1,0 +1,42 @@
+{
+	"description": "Фреймворк для создания многомерных программных комплексов\r\nна основе архитектуры микропроцессов",
+	"version": "Стадия разработки",
+	"sections": {
+		"architecture": "Архитектура",
+		"rules": "Правила",
+		"rules/process": "Положения по процессам",
+		"quick-start": "Быстрый старт",
+		"tutorial": "Руководство",
+		"docs": "Документация"
+	},
+	"anchors": {
+		"overview": "Обзор",
+		"process": "Процесс",
+		"component": "Компонент",
+		"complex": "Комплекс",
+		"configuration": "Конфигурация",
+		"launch": "Запуск",
+		"events": "События",
+		"communication": "Сообщение",
+		"shutdown": "Завершение работы",
+		"delete": "Удаление"
+	},
+	"buttons": {
+		"quick-start": "Начнем!",
+		"tutorial": "Руководство"
+	},
+	"point": [
+		{
+			"title": "Scalability",
+			"description": "Maximality independence of Elements"
+		},
+		{
+			"title": "Autonomy",
+			"description": "It's may start working from the box"
+		},
+		{
+			"title": "Adaptable",
+			"description": "A fairly simple but very comprehensive API is available"
+		}
+	]
+}

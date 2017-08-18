@@ -1,0 +1,14 @@
+{
+	"port": 3000,
+	"sections": ["architecture", "rules", "quick-start", "tutorial", "docs"],
+	"anchors": {
+		"architecture": ["overview", "process", "component", "complex"],
+		"rules/process": ["configuration", "launch", "events", "communication", "shutdown", "delete"],
+		"quick-start": ["overview", "process", "component", "complex"],
+		"tutorial": ["overview", "process", "component", "complex"],
+		"docs": ["overview", "process", "component", "complex"]
+	},
+	"subMenu": {
+		"rules": ["overview", "process", "component", "complex"]
+	}
+}

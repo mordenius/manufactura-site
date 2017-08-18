@@ -1,0 +1,35 @@
+{
+	"description": "The framework for creating multi-dimensional software complex\r\nbased on the architecture of microprocesses.",
+	"version": "Стадія розробки",
+	"sections": {
+		"architecture": "Архітектура",
+		"rules": "Правила",
+		"quick-start": "Швидкий старт",
+		"tutorial": "Використання",
+		"docs": "Документація"
+	},
+	"anchors": {
+		"overview": "Обзор",
+		"process": "Процесс",
+		"component": "Компонент",
+		"complex": "Комплекс"
+	},
+	"buttons": {
+		"quick-start": "До справи!",
+		"tutorial": "Керівництво"
+	},
+	"point": [
+		{
+			"title": "",
+			"description": ""
+		},
+		{
+			"title": "",
+			"description": ""
+		},
+		{
+			"title": "",
+			"description": ""
+		}
+	]
+}
