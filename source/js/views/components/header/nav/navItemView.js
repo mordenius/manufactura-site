@@ -1,7 +1,7 @@
 import { createElement } from "react";
 import { ComponentStateStore } from "redux-store-controller";
-import trim from "lodash/trim";
 import kebabCase from "lodash/kebabCase";
+import startsWith from "lodash/startsWith";
 
 class NavItemView extends ComponentStateStore {
 	constructor(propsData) {
@@ -14,14 +14,12 @@ class NavItemView extends ComponentStateStore {
 	}
 
 	render() {
-		const path = trim(this.props.data)
-			.toLocaleLowerCase()
-			.replace(/[ ,:]/gi, "-");
+		const path = kebabCase(this.props.data);
 
 		return createElement(
 			"div",
 			{
-				className: this.state.viewport === `/${path}` ? "current" : "",
+				className: startsWith(this.state.viewport, `/${path}`) ? "current" : "",
 				onClick: this.click.bind(this)
 			},
 			this.props.stores.langPack.getStore.sections[this.props.data]

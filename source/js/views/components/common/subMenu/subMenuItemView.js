@@ -1,6 +1,6 @@
 import React, { createElement } from "react";
 import { ComponentStateStore } from "redux-store-controller";
-import trim from "lodash/trim";
+import kebabCase from "lodash/kebabCase";
 import path from "path";
 
 class SubMenuItemView extends ComponentStateStore {
@@ -14,9 +14,7 @@ class SubMenuItemView extends ComponentStateStore {
 	}
 
 	clickAnchor() {
-		const pathname = trim(this.props.data)
-			.toLocaleLowerCase()
-			.replace(/[ ,:]/gi, "-");
+		const pathname = kebabCase(this.props.data);
 		const h = this.props.history;
 		h.push(`${h.location.pathname}#${pathname}`);
 	}
