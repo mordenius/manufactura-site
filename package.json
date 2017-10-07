@@ -7,7 +7,8 @@
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"dev": "webpack-dev-server --config ./webpack.dev.config.js --hot --watch --inline",
 		"prod": "webpack --define process.env.NODE_ENV='\"production\"' --config ./webpack.prod.config.js",
-		"lint:js": "eslint ./source/js --ext .jsx --ext .js",
+		"start-dev": "babel-node test/server",
+		"lint:js": "eslint ./source/manufactura/js --ext .jsx --ext .js",
 		"lint-staged": "lint-staged"
 	},
 	"pre-commit": "lint-staged",
