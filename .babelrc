@@ -1,25 +1,20 @@
 {
-	"presets" : ["es2015", "react",
-		["env", {
-			"targets": {
-				"browsers": ["last 2 versions", "safari >= 7"]
-			}
-		}]],
-	"plugins": [
-		["babel-plugin-root-import",
-			[{
-				"rootPathPrefix": "~",
-				"rootPathSuffix": "source/js"
-			},
-				{
-					"rootPathPrefix": "@",
-					"rootPathSuffix": "source/data"
+	"presets" : [
+		["bbt",
+			{
+				"targets": {
+					"browsers": ["last 2 versions", "safari >= 7"]
 				},
-				{
-					"rootPathPrefix": "#",
-					"rootPathSuffix": "source/md"
-				}
-			]
+				"react": true,
+				"roots": [
+					{
+						"rootPathPrefix": "~", "rootPathSuffix": "source/manufactura/js"
+					},
+					{
+						"rootPathPrefix": "@", "rootPathSuffix": "source/data"
+					}
+				]
+			}
 		]
 	]
 }
