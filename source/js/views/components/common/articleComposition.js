@@ -2,7 +2,7 @@ import React, { createElement } from "react";
 import { ComponentStateStore } from "redux-store-controller";
 import TitleView from "~/views/components/common/titleView";
 import SubMenuComposition from "~/views/components/common/subMenu/subMenuComposition";
-import ArticleView from "~/views/components/common/ArticleView";
+import ArticleView from "~/views/components/common/articleView";
 
 class ArticleComposition extends ComponentStateStore {
 	constructor(propsData){
