@@ -1,17 +1,11 @@
-import http from "http";
 import express from "express";
 import path from "path";
 import fs from "fs";
-// import ip from "ip";
-import Config from "@/config.json";
+import Config from "@/config";
 
 class HttpServer {
 	constructor() {
 		this.app = express();
-		this.server = http.createServer(this.app);
-
-		// this.ip = ip.address();
-		this.ip = "localhost";
 	}
 
 	init() {
@@ -29,9 +23,9 @@ class HttpServer {
 
 	start() {
 		return new Promise(resolve => {
-			this.server.listen(Config.port, this.ip, () => {
+			this.app.listen(Config.port, () => {
 				global.console.log(
-					`${new Date()} Server ${this.ip} is listening on port ${Config.port}`
+					`${new Date()} Server is listening on port ${Config.port}`
 				);
 				resolve();
 			});
@@ -39,16 +33,6 @@ class HttpServer {
 	}
 
 	initMiddleware() {
-		// this.app.use(helmet.noCache());
-		// this.app.use(helmet.frameguard());
-		//
-		// this.app.use(bodyParser.json());
-		// this.app.use(
-		// 	bodyParser.urlencoded({
-		// 		extended: true
-		// 	})
-		// );
-
 		this.app.use((req, res, next) => {
 			res.header("Access-Control-Allow-Origin", "*");
 			res.header("Access-Control-Allow-Credentials", true);
@@ -59,7 +43,7 @@ class HttpServer {
 	}
 
 	initView() {
-		this.app.use("/build", express.static("build"));
+		this.app.use("/public", express.static("public"));
 	}
 
 	initGetHandlers() {
@@ -77,7 +61,7 @@ class HttpServer {
 		});
 
 		this.app.get('*', (req, res) => {
-			res.sendFile(path.resolve('./index.html'));
+			res.sendFile(path.resolve('./test/server/index.html'));
 		});
 	}
 }

@@ -1,8 +1,9 @@
-/.idea/
-*.iml
+/.idea/*
+/*.iml
 
-/node_modules/
-/build/
+/node_modules/*
+/npm-debug.log
+/package-lock.json
 
-npm-debug.json
-package-lock.json
+
+/public/*
