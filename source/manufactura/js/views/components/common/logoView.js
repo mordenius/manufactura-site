@@ -8,7 +8,7 @@ class LogoView extends Component {
 	render() {
 		return (
 			<div className="logo" onClick={this.click.bind(this)}>
-				<img src="/build/style/img/logo.png" />
+				<img src="/public/manufactura/style/img/logo.png" />
 			</div>
 		);
 	}
