@@ -21,10 +21,7 @@ class ArticleView extends Component {
 
 	getApi() {
 		const st = this.props.stores;
-		fetch(
-			`http://localhost:3000/md/${st.lang.getStore.lang}${st.viewport.getStore
-				.viewport}`
-		)
+		fetch(`/md/${st.lang.getStore.lang}${st.viewport.getStore.viewport}`)
 			.then(res => res.json())
 			.then(res => {
 				this.setState({ article: res.message });
