@@ -1,12 +1,13 @@
 module.exports = {
+	context: `${__dirname}/source/manufactura/`,
 	entry: [
-		`${__dirname}/source/js/index`,
+		`${__dirname}/source/manufactura/js/index`,
 		`${__dirname}/node_modules/webpack/hot/dev-server`
 	],
 	output: {
-		path: `${__dirname}/build/`,
-		publicPath: "/build/",
-		filename: "main.min.js"
+		path: `${__dirname}/public/manufactura/`,
+		publicPath: "/public/manufactura/",
+		filename: "manufactura.min.js"
 	},
 	module: {
 		rules: [
@@ -15,8 +16,8 @@ module.exports = {
 				use: ["style-loader", "css-loader", "sass-loader"]
 			},
 			{
-				test: /\.(png|jpg|gif|svg|ttf|eot|woff|woff2|otf)$/,
-				exclude: /node_modules/,
+				test: /\.(jpg|jpeg|gif|png|woff|woff2|eot|ttf|svg|otf)$/,
+				exclude: /\/node_modules\//,
 				use: {
 					loader: "file-loader",
 					options: {
@@ -27,7 +28,7 @@ module.exports = {
 			{
 				test: /\.jsx?/,
 				exclude: /node_modules/,
-				use: ["react-hot-loader", "babel-loader"]
+				use: ["babel-loader"]
 			},
 			{
 				test: /\.json$/,
